@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+
+<div class="container">
+    <div class="item sidebar-left"><p>Sidebar left</p></div>
+    <div class="item content"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+        has
+        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book.</p>
+    </div>
+    <div class="item sidebar-right"><p>Sidebar right</p></div>
+    <div class="item footer"><p>Footer created by @xyz</p></div>
+</div>
+
+</body>
+
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 10fr 1fr;
+        grid-template-rows: 150px 150px 150px;
+        grid-gap: 25px;
+        grid-template-areas: "left content right" "left content right" "footer footer footer"
+    }
+    .footer {
+        grid-area: footer;
+    }
+    .sidebar-left {
+        grid-area: left;
+    }
+    .sidebar-right {
+        grid-area: right;
+    }
+    .content {
+        grid-area: content;
+    }
+
+    @media (max-width: 700px) {
+        .container {
+            grid-template-areas: "content content content" "left left right" "footer footer footer"
+        }
+    }
+
+</style>
+</html>
