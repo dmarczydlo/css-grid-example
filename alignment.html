@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+
+<div class="header">justyfy-* && align-*</div>
+<div class="container">
+    <div class="itm">1</div>
+    <div class="itm">2</div>
+    <div class="itm">3</div>
+    <div class="itm">4</div>
+    <div class="itm">5</div>
+    <div class="itm">6</div>
+    <div class="itm">7</div>
+    <div class="itm">8</div>
+    <div class="itm">9</div>
+    <div class="itm">10</div>
+    <div class="itm">1</div>
+    <div class="itm">2</div>
+    <div class="itm">3</div>
+    <div class="itm">4</div>
+    <div class="itm">5</div>
+    <div class="itm">6</div>
+    <div class="itm">7</div>
+    <div class="itm">8</div>
+    <div class="itm">9</div>
+    <div class="itm itm10">10</div>
+</div>
+
+</body>
+
+<style>
+    .container {
+        border: 1px solid var(--yellow);
+        display: grid;
+        grid-template-columns: repeat(5, 100px);
+        grid-template-rows: repeat(4, 100px);
+
+        grid-gap: 25px;
+        place-items: center center;
+        justify-content: center;
+
+    }
+    .itm {
+        background: aliceblue;
+        border: 1px solid silver;
+        font-size: 25px;
+        padding: 20px;
+    }
+
+    .itm10 {
+        justify-self: end;
+        align-self: start;
+        background-color: #6d47d9;
+    }
+
+</style>
+</html>
